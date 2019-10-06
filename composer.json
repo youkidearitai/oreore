@@ -6,13 +6,15 @@
         "sort-packages": true
     },
     "require": {
-        "php": "7.*@dev",
-        "ext-intl": "^7.4@RC",
-        "ext-mbstring": "^7.4@RC"
+        "php": "^7.3",
+        "ext-intl": "^7.3",
+        "ext-mbstring": "^7.3"
     },
     "autoload": {
         "files": [
             "src/functions.php"
         ]
+    },
+    "require-dev": {
     }
 }
