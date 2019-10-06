@@ -6,14 +6,14 @@
 
 ### Direnv
 
-PHPとcomposerを使うためにDirenvを使ってPATHを通してる
+PHP 7.4.0RC3とcomposerを使うために[direnv](https://direnv.net/)を使ってPATHを通してる
 
     $ cat .envrc
     export PATH='local/bin':$PATH
 
 ### PHP
 
-PHPのバージョンは7.4RC3を使ってる。PHP 7.4RC3のソースをphp74ディレクトリを作ってコンパイル
+PHPのバージョンは7.3。ただし、7.4.0RC3を使ってる。PHP 7.4.0RC3のソースをphp74ディレクトリを作ってコンパイル
 
 #### コンパイル
 
@@ -24,6 +24,14 @@ PHPのバージョンは7.4RC3を使ってる。PHP 7.4RC3のソースをphp74�
     $ cd php74
     $ ./configure --enable-mbstring --enable-intl --prefix=`pwd`/../local/ --with-openssl --with-zlib
     $ make && make install
+
+### Composer
+
+Composerのインストールは[Introduction - Composer](https://getcomposer.org/doc/00-intro.md#locally)のLocallyの通り。
+
+composerコマンドで実行できるように、local/binにcomposerファイルとしてインストール
+
+    $ php composer-setup.php --install-dir=./local/bin/ --filename=composer
 
 #### Directory
 
@@ -55,14 +63,6 @@ PHPのバージョンは7.4RC3を使ってる。PHP 7.4RC3のソースをphp74�
     └── var
         ├── log
         └── run
-
-### Composer
-
-Composerのインストールは[Introduction - Composer](https://getcomposer.org/doc/00-intro.md#locally)のLocallyの通り。
-
-composerコマンドで実行できるように、local/binにcomposerファイルとしてインストール
-
-    $ php composer-setup.php --install-dir=./local/bin/ --filename=composer
 
 ## LICENSE
 
