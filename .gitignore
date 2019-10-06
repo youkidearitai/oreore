@@ -1,6 +1,5 @@
 /local/
 /vendor/
-composer.lock
 php74
 .DS_Store
 ._.DS_Store
