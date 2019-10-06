@@ -1,0 +1,13 @@
+{
+    "name": "youkidearitai/oreore",
+    "description": "Oreore is a simple framework",
+    "license": "MIT",
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "php": "7.*@dev",
+        "ext-intl": "^7.4@RC",
+        "ext-mbstring": "^7.4@RC"
+    }
+}
