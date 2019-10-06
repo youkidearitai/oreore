@@ -9,5 +9,10 @@
         "php": "7.*@dev",
         "ext-intl": "^7.4@RC",
         "ext-mbstring": "^7.4@RC"
+    },
+    "autoload": {
+        "files": [
+            "src/functions.php"
+        ]
     }
 }
