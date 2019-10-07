@@ -1,10 +1,16 @@
 # Oreore framework
 
-最近のイケてるオレオレPHPフレームワークを通じてイケてるPHP書きたい
+最近のイケてるオレオレPHPフレームワークを通じてイケてるPHP書きたい <https://1000php.connpass.com/event/150058/>
 
 ## URL
 
 おれのさいきょうのURL [http://localhost:8000](https://warm-sands-96438.herokuapp.com)
+
+## RUN
+
+ローカル上でプログラムを走らせる
+
+    $ php -S localhost:8000 -t web/ web/index.php
 
 ## INSTALL
 
@@ -32,6 +38,11 @@ PHPのバージョンは7.3。
     $ cd php74
     $ ./configure --enable-mbstring --enable-intl --prefix=`pwd`/../local/ --with-openssl --with-zlib
     $ make && make install
+
+Macの $PKG\_CONFIG\_PATH はこんなかんじ
+
+    $ echo $PKG_CONFIG_PATH
+    /usr/local/opt/openssl/lib/pkgconfig:/usr/local/opt/icu4c/lib/pkgconfig/
 
 ### Composer
 
