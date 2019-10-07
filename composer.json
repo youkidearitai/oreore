@@ -11,6 +11,9 @@
         "ext-mbstring": "^7.3"
     },
     "autoload": {
+        "psr-4": {
+            "Oira\\": "src"
+        },
         "files": [
             "src/functions.php"
         ]
