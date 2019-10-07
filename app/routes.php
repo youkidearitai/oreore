@@ -19,7 +19,7 @@ $routes["/"] = function() use ($template) {
     ];
 };
 
-$routes["/phpinfo.php"] = function() use ($template) {
+$routes["/phpinfo.php"] = function() {
     ob_start();
     phpinfo();
 
