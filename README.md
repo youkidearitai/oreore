@@ -4,7 +4,7 @@
 
 ## URL
 
-おれのさいきょうのURL [http://localhost:8000](https://warm-sands-96438.herokuapp.com)
+おれのさいきょうのURL [http://localhost:8000](https://oreore-tekimen.herokuapp.com)
 
 ## RUN
 
