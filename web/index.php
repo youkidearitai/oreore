@@ -4,6 +4,8 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $routes = require __DIR__ . '/../app/routes.php';
 
+$bootstrap = new \Oira\Bootstrap();
+
 $request_uri = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 
 $not_found = function() {
