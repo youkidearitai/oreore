@@ -18,22 +18,22 @@
 
 ### Direnv
 
-PHP 7.4.0RC3とcomposerを使うために[direnv](https://direnv.net/)を使ってPATHを通してる
+PHP 7.4.0とcomposerを使うために[direnv](https://direnv.net/)を使ってPATHを通してる
 
     $ cat .envrc
     export PATH='local/bin':$PATH
 
 ### PHP
 
-PHPのバージョンは7.3。
+PHPのバージョンは7.4。
 
 #### コンパイル
 
-7.4.0RC3をローカルで使ってる。PHP 7.4.0RC3のソースをphp74ディレクトリを作ってコンパイル
+7.4.0をローカルで使ってる。PHP 7.4.0のソースをphp74ディレクトリを作ってコンパイル
 
-    $ git archive php-7.4.0RC3 > path/to/dir/php-7.4.0RC3.tar # php-srcのディレクトリ
+    $ git archive php-7.4.0 > path/to/dir/php-7.4.0.tar # php-srcのディレクトリ
     $ cd path/to/dir
-    $ tar xvf php-7.4.0RC3.tar
+    $ tar xvf php-7.4.0.tar
     $ mkdir php74
     $ cd php74
     $ ./configure --enable-mbstring --enable-intl --prefix=`pwd`/../local/ --with-openssl --with-zlib
@@ -43,6 +43,35 @@ Macの $PKG\_CONFIG\_PATH はこんなかんじ
 
     $ echo $PKG_CONFIG_PATH
     /usr/local/opt/openssl/lib/pkgconfig:/usr/local/opt/icu4c/lib/pkgconfig/
+
+Phan入れるとき。expermentalディレクトリ作った（スペルミス）
+
+
+    $ mkdir expermental
+    $ cd !$
+    $ git clone https://github.com/nikic/php-ast
+    $ cd php-ast
+
+envrcでPATHを通しておく
+
+    $ cat .envrc
+    export PATH='../../local/bin':'../../vendor/bin':$PATH
+    export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig:/usr/local/opt/openssl/lib/pkgconfig"
+    $ direnv reload
+
+ビルドをする
+
+    $ phpize
+    $ ./configure
+    $ make
+    $ make install
+
+php.iniにextension=ast.soを追加
+
+    $ vi local/lib/php.ini
+    extension=ast.so
+
+ComposerでPhanをインストール
 
 ### Composer
 
