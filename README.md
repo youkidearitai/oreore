@@ -29,11 +29,11 @@ PHPのバージョンは7.4。
 
 #### コンパイル
 
-7.4.0をローカルで使ってる。PHP 7.4.0のソースをphp74ディレクトリを作ってコンパイル
+7.4をローカルで使ってる。PHP 7.4のソースをphp74ディレクトリを作ってコンパイル(例としてPHP 7.4.3)
 
-    $ git archive php-7.4.0 > path/to/dir/php-7.4.0.tar # php-srcのディレクトリ
+    $ git archive php-7.4.3 > path/to/dir/php-7.4.3.tar # php-srcのディレクトリ
     $ cd path/to/dir
-    $ tar xvf php-7.4.0.tar
+    $ tar xvf php-7.4.3.tar
     $ mkdir php74
     $ cd php74
     $ ./configure --enable-mbstring --enable-intl --prefix=`pwd`/../local/ --with-openssl --with-zlib
